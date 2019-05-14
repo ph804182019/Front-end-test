@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimeOut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="app">
+        <div class="itemPic">
+            <div class="imgbox">
+                <img src="nicola-perantoni-251-unsplash.jpg" alt="">
+            </div>
+        </div>
+        <aside>
+            <div class="flexBox">
+               <span class="preOrder" v-if="preOrder<99">預購數量:{{ preOrder }}</span>
+                <div class="countTime" v-bind:class="{ 'countTime60': sec60, 'countTime0': sec0 }">
+                    倒數時間:{{ time }}
+                </div>
+
+                <div class="itemName">
+                    商品名稱:單眼相機
+                </div>
+
+                <div class="countItem">
+                    剩餘數量:{{ numOfItem }}
+                </div>
+
+                <button id="btn" @click="boxChecks()">
+                    {{ btn }}
+                </button>
+            </div>
+        </aside>
+        <div class="box" v-if="boxCheck">
+           <span>{{ wantTo }}</span>
+            <div class="xBtn" @click="boxChecks()">x</div>
+            <div class="countBox">
+                <div class="less" @click="numLess()">-</div>
+                <div class="num">
+                    {{ boxNum }}
+                </div>
+                <div class="plus" @click="numPlus()">+</div>
+            </div>
+            <div class="enter" @click="enterFn(),boxChecks()">確定</div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

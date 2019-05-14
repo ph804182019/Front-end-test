@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+main{
+    display: flex;
+}
+
+.itemPic{
+    width: 50%;
+    margin: 30px;
+}
+
+.imgbox{
+    width: 100%;
+}
+
+.imgbox>img{
+    width: 100%;
+}
+
+aside{
+    line-height: 30px;
+    font-size: 30px;
+    margin: 30px;
+}
+
+.flexBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexBox>div,flexBox>button{
+    height: 160px;
+    width: 500px;
+    line-height: 160px;
+    margin: 20px 0px;
+    background-color: #fff;
+}
+
+.flexBox>span{
+    position: absolute;
+    left: 75%;
+    top: 0;
+}
+
+.countTime{
+    border: solid green 5px;
+}
+
+.countTime60{
+    border: solid orange 5px;
+}
+
+.countTime0{
+    border: solid gray 5px;
+}
+
+.box{
+    width: 360px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #c7ecee;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.box>span{
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.box>.xBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #636e72;
+}
+
+.countBox{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.less,.plus{
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: solid #000 2px;
+    cursor: pointer;
+}
+
+.enter{
+    cursor: pointer;
+    background-color: #fff;
+    border: solid #000 2px;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+}
