@@ -16,7 +16,7 @@
         </div>
         <aside>
             <div class="flexBox">
-               <span class="preOrder" v-if="preOrder<99">預購數量:{{ preOrder }}</span>
+               <span class="preOrder" v-if="preOrder>0">預購數量:{{ preOrder }}</span>
                 <div class="countTime" v-bind:class="{ 'countTime60': sec60, 'countTime0': sec0 }">
                     倒數時間:{{ time }}
                 </div>

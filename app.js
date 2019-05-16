@@ -9,7 +9,7 @@ var vm = new Vue({
         boxNum:0,
         boxCheck:false,
         wantTo:'我要購買',
-        preOrder:99,
+        preOrder:0,
         //0=normal,1=preOrder,2=over
         mode:0
     },
@@ -38,7 +38,7 @@ var vm = new Vue({
                     this.boxNum = this.boxNum + 1;
                 }
             }else if(this.mode==1){
-                if(this.boxNum<this.preOrder){
+                if(this.boxNum<99){
                     this.boxNum = this.boxNum + 1;
                 }
             }
@@ -54,7 +54,7 @@ var vm = new Vue({
             if(this.mode==0){
                 this.numOfItem = this.numOfItem - this.boxNum;
             }else if(this.mode==1){
-                this.preOrder = this.preOrder - this.boxNum;
+                this.preOrder = this.preOrder + this.boxNum;
             }
             this.boxNum = 0;
             if(this.numOfItem == 0){
